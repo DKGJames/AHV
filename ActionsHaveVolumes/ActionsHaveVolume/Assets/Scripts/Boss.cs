@@ -81,6 +81,13 @@ public class Boss : MonoBehaviour
             //Destroys the platform
             Destroy(coll.gameObject);
         }
+
+        //If the enemy hits a chest
+        if (coll.gameObject.layer == 11)
+        {
+            //Destroys the chest
+            Destroy(coll.gameObject);
+        }
     }
 
     //Removes health and bounces the enemy
