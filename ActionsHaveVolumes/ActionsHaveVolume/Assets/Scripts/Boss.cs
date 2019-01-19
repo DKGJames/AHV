@@ -73,6 +73,16 @@ public class Boss : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private void OnCollisionEnter2D(Collision2D coll)
+    {
+        //If the enemy hits a destructable platform
+        if (coll.gameObject.layer == 10)
+        {
+            //Destroys the platform
+            Destroy(coll.gameObject);
+        }
+    }
+
     //Removes health and bounces the enemy
     public void TakeDamage(int damage)
     {

@@ -187,14 +187,4 @@ public class Troll : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
-
-    private void OnCollisionEnter2D(Collision2D coll)
-    {
-        //If the enemy hits a destructable platform
-        if (coll.gameObject.layer == 10)
-        {
-            //Destroys the platform
-            Destroy(coll.gameObject);
-        }
-    }
 }
